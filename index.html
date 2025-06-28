@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sangorkgkobal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; }
+    nav { background: #002b5c; }
+    .nav-link, .navbar-brand { color: #fff !important; }
+    .hero-slide {
+      height: 80vh;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+    .hero-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      text-align:center;
+    }
+    .services, .insights { padding: 60px 0; }
+    .service-card { transition: transform 0.3s; }
+    .service-card:hover { transform: translateY(-5px); }
+    .footer { background: #f2f2f2; padding: 40px 0; font-size: 0.9rem; }
+    .footer a { color: #333; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top px-4">
+  <a class="navbar-brand" href="#">Sangorkgkobal</a>
+  <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navMenu">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+      <li class="nav-item"><a class="nav-link" href="#carrer">Carrers</a></li>
+      <li class="nav-item"><a class="nav-link" href="#platforms">Platforms</a></li>
+      <li class="nav-item"><a class="nav-link" href="#insights">Insights</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Slider -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <!-- <img href="D:/Downloads/'ChatGPT Image Jun 28, 2025, 11_13_02 AM.png'"> -->
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+        
+      <div class="hero-slide" style="background-image:url('images/ai_dev_image_team.png')">
+        <div class="hero-overlay animate__animated animate__fadeIn">
+          <h1>Transforming Enterprises with AI</h1>
+          <p>Smart, scalable solutions for modern business</p>
+          <a href="#services" class="btn btn-primary mt-3">Explore Solutions</a>
+        </div>
+      </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="hero-slide" style="background-image:url('images/Cloud_devlop.png')">
+        <div class="hero-overlay animate__animated animate__zoomIn">
+          <h1>Cloud-Native Platforms & Develop AI Platforms</h1>
+          <p>Innovate, scale, and develop your future</p>
+          <a href="#platforms" class="btn btn-primary mt-3">See Platforms</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- Services Section -->
+<section id="services" class="services container">
+  <h2 class="text-center mb-5">Our Core Services</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card service-card h-100">
+        <img src="svc-ai.jpg" class="card-img-top" alt="AI & Automation">
+        <div class="card-body">
+          <h5 class="card-title">AI,Gen AI & Automation</h5>
+          <p class="card-text">End-to-end AI-driven transformation</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card service-card h-100">
+        <img src="svc-cloud.jpg" class="card-img-top" alt="Cloud Services">
+        <div class="card-body">
+          <h5 class="card-title">Cloud Services</h5>
+          <p class="card-text">Secure, scalable, and optimized cloud architectures</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card service-card h-100">
+        <img src="svc-cyber.jpg" class="card-img-top" alt="Cybersecurity">
+        <div class="card-body">
+          <h5 class="card-title">Software Development</h5>
+          <p class="card-text">Develop AI driven software for your solutions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Platforms / Products -->
+<section id="platforms" class="services bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Platform Highlights</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card h-100">
+          <img src="platform1.jpg" class="card-img-top" alt="Platform 1">
+          <div class="card-body">
+            <h5 class="card-title">Platform One</h5>
+            <p class="card-text">Short description of your platform</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100">
+          <img src="platform2.jpg" class="card-img-top" alt="Platform 2">
+          <div class="card-body">
+            <h5 class="card-title">Platform Two</h5>
+            <p class="card-text">Short description of another platform</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Insights -->
+<section id="insights" class="insights container">
+  <h2 class="text-center mb-5">Latest Insights</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="insight1.jpg" class="card-img-top" alt="Insight">
+        <div class="card-body">
+          <h5 class="card-title">Insight Title One</h5>
+          <p class="card-text">Brief summary or blurb about the insight article</p>
+          <a href="#" class="btn btn-link">Read More →</a>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat for more cards -->
+  </div>
+</section>
+
+<!-- carrer -->
+<section id="carrer" class="carrer container">
+    <h2 class="text-center mb-5">Carrer</h2>
+    <div class="row g-4">
+      <div class="col-md-4" style="width: 100%;">
+        <div class="card h-100">
+          <img src="insight1.jpg" class="card-img-top" alt="Insight">
+          <div class="card-body">
+            <h5 class="card-title">Carrer/Recruitment</h5>
+            <p class="card-text">Want to join our Team</p>
+            <form>
+                <div class="mb-3">
+                  <input type="email" class="form-control" placeholder="Your Email">
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control" rows="3" placeholder="Message/Brief about your self"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat for more cards -->
+    </div>
+  </section>
+
+<!-- Contact Footer -->
+<footer id="contact" class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Get in Touch</h5>
+        <form>
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Your Work Email">
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Request Info</button>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <h5>Legal & Policies</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Privacy Notice</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#">Security Policy</a></li>
+        </ul>
+        <p class="mt-4">&copy; 2025 Sangorkgkobal Ltd.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
