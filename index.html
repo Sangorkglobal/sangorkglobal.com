@@ -215,7 +215,7 @@
 </section>
 
 <!-- carrer -->
-<section id="carrer" class="carrer container">
+<section id="career" class="career container">
   <h2 class="text-center mb-5">Career</h2>
   <div class="row g-4">
     <div class="col-md-4" style="width: 100%;">
@@ -223,20 +223,27 @@
         <div class="card-body" style="background: rgba(0,0,0,0.5); padding: 2rem;">
           <h5 class="card-title">Career/Recruitment</h5>
           <p class="card-text">Want to join our Team</p>
-          <form>
+
+          <form id="careerForm"  enctype="multipart/form-data">
             <div class="mb-3">
-              <input type="email" class="form-control transparent-input" placeholder="Your Email">
+              <input type="email" class="form-control transparent-input" placeholder="Your Email" name="email" required>
             </div>
             <div class="mb-3">
-              <textarea class="form-control transparent-input" rows="3" placeholder="Message/Brief about yourself"></textarea>
+              <textarea class="form-control transparent-input" rows="3" placeholder="Message/Brief about yourself" name="message"></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-white">Upload Resume (PDF or DOCX)</label>
+              <input style="width: 20%;" type="file" class="form-control transparent-input" name="resume" accept=".pdf,.doc,.docx" required>
             </div>
             <button type="submit" class="btn btn-light">Submit</button>
           </form>
+
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 <hr>
 <!-- Contact Footer -->
@@ -297,5 +304,28 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.getElementById('careerForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  const form = e.target;
+  const formData = new FormData(form);
+
+  const scriptURL = "https://script.google.com/macros/s/AKfycbxDIJgHtwRIN3bpNTUfU9nSRhkQQk-pUNkE9k-6agM5S6QjWaHfClrwvA98QUU0ceoh2Q/exec"; // Paste your Google Apps Script Web App URL here
+
+  try {
+    const response = await fetch(scriptURL, {
+      method: "POST",
+      body: formData
+    });
+    const result = await response.text();
+    alert(result);
+    form.reset();
+  } catch (error) {
+    alert("Error uploading resume: " + error.message);
+  }
+});
+</script>
+
 </body>
 </html>
