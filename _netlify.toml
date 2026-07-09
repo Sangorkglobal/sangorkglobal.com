@@ -1,11 +1,11 @@
 [[redirects]]
-  from = "http://sangorkglobal.com/*"
-  to = "https://www.sangorkglobal.com/:splat"
+  from = "http://sangork.com/*"
+  to = "https://www.sangork.com/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "https://sangorkglobal.com/*"
-  to = "https://www.sangorkglobal.com/:splat"
+  from = "https://sangork.com/*"
+  to = "https://www.sangork.com/:splat"
   status = 301
   force = true
